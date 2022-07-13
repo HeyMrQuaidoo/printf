@@ -12,7 +12,7 @@
  */
 typedef struct format
 {
-	char *options;
+	char *spec;
 	int (*func)();
 } format_t;
 int _printf(const char *format, ...);
@@ -21,5 +21,5 @@ int put_string(va_list v);
 int put_char(va_list v);
 int _putchar(char c);
 int put_decimal(va_list v);
-int put_percent(va_list v);
+int put_percent(__attribute__((unused))va_list v);
 #endif
